@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='project',
   syntax='proto3',
   serialized_options=b'\n\026org.hopenly.ilyde.grpcB\014ProjectProtoP\001\242\002\002PS',
-  serialized_pb=b'\n\rservice.proto\x12\x07project\x1a\x1cgoogle/protobuf/struct.proto\"\x10\n\x02ID\x12\n\n\x02id\x18\x01 \x01(\t\"2\n\x04User\x12\n\n\x02id\x18\x01 \x01(\t\x12\x10\n\x08username\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\"\xb4\x02\n\x07Project\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\'\n\nvisibility\x18\x04 \x01(\x0e\x32\x13.project.VISIBILITY\x12#\n\x08template\x18\x05 \x01(\x0e\x32\x11.project.TEMPLATE\x12\x1c\n\x05owner\x18\x06 \x01(\x0b\x32\r.project.User\x12\x1e\n\x07members\x18\x07 \x03(\x0b\x32\r.project.User\x12\x1d\n\x05state\x18\x08 \x01(\x0e\x32\x0e.project.STATE\x12\'\n\x06labels\x18\t \x03(\x0b\x32\x17.google.protobuf.Struct\x12\x11\n\tcreate_at\x18\n \x01(\t\x12\x13\n\x0blast_update\x18\x0b \x01(\t\"2\n\x0fOperationStatus\x12\x0e\n\x06status\x18\x01 \x01(\r\x12\x0f\n\x07message\x18\x02 \x01(\t\"f\n\rSearchRequest\x12\'\n\x06\x66ilter\x18\x01 \x01(\x0b\x32\x17.google.protobuf.Struct\x12\x13\n\x0bpage_number\x18\x02 \x01(\x05\x12\x17\n\x0fresult_per_page\x18\x03 \x01(\x05\"q\n\x0eSearchResponse\x12\r\n\x05total\x18\x01 \x01(\x05\x12\x13\n\x0bpage_number\x18\x02 \x01(\x05\x12\x17\n\x0fresult_per_page\x18\x03 \x01(\x05\x12\"\n\x08projects\x18\x04 \x03(\x0b\x32\x10.project.Project*%\n\nVISIBILITY\x12\x0b\n\x07PRIVATE\x10\x00\x12\n\n\x06PUBLIC\x10\x01*\x1d\n\x05STATE\x12\x08\n\x04OPEN\x10\x00\x12\n\n\x06\x43LOSED\x10\x01*\x17\n\x08TEMPLATE\x12\x0b\n\x07SKLEARN\x10\x00\x32\x8e\x02\n\x0fProjectServices\x12+\n\x08Retrieve\x12\x0b.project.ID\x1a\x10.project.Project\"\x00\x12.\n\x06\x43reate\x12\x10.project.Project\x1a\x10.project.Project\"\x00\x12.\n\x06Update\x12\x10.project.Project\x1a\x10.project.Project\"\x00\x12\x31\n\x06\x44\x65lete\x12\x0b.project.ID\x1a\x18.project.OperationStatus\"\x00\x12;\n\x06Search\x12\x16.project.SearchRequest\x1a\x17.project.SearchResponse\"\x00\x42-\n\x16org.hopenly.ilyde.grpcB\x0cProjectProtoP\x01\xa2\x02\x02PSb\x06proto3'
+  serialized_pb=b'\n\rservice.proto\x12\x07project\x1a\x1cgoogle/protobuf/struct.proto\",\n\x0b\x46ileVersion\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\"\x10\n\x02ID\x12\n\n\x02id\x18\x01 \x01(\t\"2\n\x04User\x12\n\n\x02id\x18\x01 \x01(\t\x12\x10\n\x08username\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\"\xb4\x02\n\x07Project\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\'\n\nvisibility\x18\x04 \x01(\x0e\x32\x13.project.VISIBILITY\x12#\n\x08template\x18\x05 \x01(\x0e\x32\x11.project.TEMPLATE\x12\x1c\n\x05owner\x18\x06 \x01(\x0b\x32\r.project.User\x12\x1e\n\x07members\x18\x07 \x03(\x0b\x32\r.project.User\x12\x1d\n\x05state\x18\x08 \x01(\x0e\x32\x0e.project.STATE\x12\'\n\x06labels\x18\t \x03(\x0b\x32\x17.google.protobuf.Struct\x12\x11\n\tcreate_at\x18\n \x01(\t\x12\x13\n\x0blast_update\x18\x0b \x01(\t\"\x92\x01\n\x08Revision\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0e\n\x06\x63ommit\x18\x02 \x01(\t\x12\x1d\n\x06\x61uthor\x18\x03 \x01(\x0b\x32\r.project.User\x12\x0f\n\x07project\x18\x04 \x01(\t\x12\'\n\tfile_tree\x18\x05 \x03(\x0b\x32\x14.project.FileVersion\x12\x11\n\tcreate_at\x18\x06 \x01(\t\"2\n\x0fOperationStatus\x12\x0e\n\x06status\x18\x01 \x01(\r\x12\x0f\n\x07message\x18\x02 \x01(\t\"f\n\rSearchRequest\x12\'\n\x06\x66ilter\x18\x01 \x01(\x0b\x32\x17.google.protobuf.Struct\x12\x13\n\x0bpage_number\x18\x02 \x01(\x05\x12\x17\n\x0fresult_per_page\x18\x03 \x01(\x05\"q\n\x0eSearchResponse\x12\r\n\x05total\x18\x01 \x01(\x05\x12\x13\n\x0bpage_number\x18\x02 \x01(\x05\x12\x17\n\x0fresult_per_page\x18\x03 \x01(\x05\x12\"\n\x08projects\x18\x04 \x03(\x0b\x32\x10.project.Project\"{\n\x16SearchRevisionResponse\x12\r\n\x05total\x18\x01 \x01(\x05\x12\x13\n\x0bpage_number\x18\x02 \x01(\x05\x12\x17\n\x0fresult_per_page\x18\x03 \x01(\x05\x12$\n\trevisions\x18\x04 \x03(\x0b\x32\x11.project.Revision*%\n\nVISIBILITY\x12\x0b\n\x07PRIVATE\x10\x00\x12\n\n\x06PUBLIC\x10\x01*\x1d\n\x05STATE\x12\x08\n\x04OPEN\x10\x00\x12\n\n\x06\x43LOSED\x10\x01*$\n\x08TEMPLATE\x12\x0b\n\x07GENERIC\x10\x00\x12\x0b\n\x07SKLEARN\x10\x01\x32\xd1\x03\n\x0fProjectServices\x12+\n\x08Retrieve\x12\x0b.project.ID\x1a\x10.project.Project\"\x00\x12.\n\x06\x43reate\x12\x10.project.Project\x1a\x10.project.Project\"\x00\x12.\n\x06Update\x12\x10.project.Project\x1a\x10.project.Project\"\x00\x12\x31\n\x06\x44\x65lete\x12\x0b.project.ID\x1a\x18.project.OperationStatus\"\x00\x12;\n\x06Search\x12\x16.project.SearchRequest\x1a\x17.project.SearchResponse\"\x00\x12\x34\n\x10RetrieveRevision\x12\x0b.project.ID\x1a\x11.project.Revision\"\x00\x12>\n\x0e\x43reateRevision\x12\x17.google.protobuf.Struct\x1a\x11.project.Revision\"\x00\x12K\n\x0eSearchRevision\x12\x16.project.SearchRequest\x1a\x1f.project.SearchRevisionResponse\"\x00\x42-\n\x16org.hopenly.ilyde.grpcB\x0cProjectProtoP\x01\xa2\x02\x02PSb\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_struct__pb2.DESCRIPTOR,])
 
@@ -41,8 +41,8 @@ _VISIBILITY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=708,
-  serialized_end=745,
+  serialized_start=1028,
+  serialized_end=1065,
 )
 _sym_db.RegisterEnumDescriptor(_VISIBILITY)
 
@@ -64,8 +64,8 @@ _STATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=747,
-  serialized_end=776,
+  serialized_start=1067,
+  serialized_end=1096,
 )
 _sym_db.RegisterEnumDescriptor(_STATE)
 
@@ -77,14 +77,18 @@ _TEMPLATE = _descriptor.EnumDescriptor(
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='SKLEARN', index=0, number=0,
+      name='GENERIC', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SKLEARN', index=1, number=1,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=778,
-  serialized_end=801,
+  serialized_start=1098,
+  serialized_end=1134,
 )
 _sym_db.RegisterEnumDescriptor(_TEMPLATE)
 
@@ -93,8 +97,47 @@ PRIVATE = 0
 PUBLIC = 1
 OPEN = 0
 CLOSED = 1
-SKLEARN = 0
+GENERIC = 0
+SKLEARN = 1
 
+
+
+_FILEVERSION = _descriptor.Descriptor(
+  name='FileVersion',
+  full_name='project.FileVersion',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='project.FileVersion.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='version', full_name='project.FileVersion.version', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=56,
+  serialized_end=100,
+)
 
 
 _ID = _descriptor.Descriptor(
@@ -123,8 +166,8 @@ _ID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=56,
-  serialized_end=72,
+  serialized_start=102,
+  serialized_end=118,
 )
 
 
@@ -168,8 +211,8 @@ _USER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=74,
-  serialized_end=124,
+  serialized_start=120,
+  serialized_end=170,
 )
 
 
@@ -269,8 +312,74 @@ _PROJECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=127,
-  serialized_end=435,
+  serialized_start=173,
+  serialized_end=481,
+)
+
+
+_REVISION = _descriptor.Descriptor(
+  name='Revision',
+  full_name='project.Revision',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='project.Revision.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='commit', full_name='project.Revision.commit', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='author', full_name='project.Revision.author', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='project', full_name='project.Revision.project', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='file_tree', full_name='project.Revision.file_tree', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='create_at', full_name='project.Revision.create_at', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=484,
+  serialized_end=630,
 )
 
 
@@ -307,8 +416,8 @@ _OPERATIONSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=437,
-  serialized_end=487,
+  serialized_start=632,
+  serialized_end=682,
 )
 
 
@@ -352,8 +461,8 @@ _SEARCHREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=489,
-  serialized_end=591,
+  serialized_start=684,
+  serialized_end=786,
 )
 
 
@@ -404,8 +513,60 @@ _SEARCHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=593,
-  serialized_end=706,
+  serialized_start=788,
+  serialized_end=901,
+)
+
+
+_SEARCHREVISIONRESPONSE = _descriptor.Descriptor(
+  name='SearchRevisionResponse',
+  full_name='project.SearchRevisionResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='total', full_name='project.SearchRevisionResponse.total', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='page_number', full_name='project.SearchRevisionResponse.page_number', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='result_per_page', full_name='project.SearchRevisionResponse.result_per_page', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='revisions', full_name='project.SearchRevisionResponse.revisions', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=903,
+  serialized_end=1026,
 )
 
 _PROJECT.fields_by_name['visibility'].enum_type = _VISIBILITY
@@ -414,18 +575,31 @@ _PROJECT.fields_by_name['owner'].message_type = _USER
 _PROJECT.fields_by_name['members'].message_type = _USER
 _PROJECT.fields_by_name['state'].enum_type = _STATE
 _PROJECT.fields_by_name['labels'].message_type = google_dot_protobuf_dot_struct__pb2._STRUCT
+_REVISION.fields_by_name['author'].message_type = _USER
+_REVISION.fields_by_name['file_tree'].message_type = _FILEVERSION
 _SEARCHREQUEST.fields_by_name['filter'].message_type = google_dot_protobuf_dot_struct__pb2._STRUCT
 _SEARCHRESPONSE.fields_by_name['projects'].message_type = _PROJECT
+_SEARCHREVISIONRESPONSE.fields_by_name['revisions'].message_type = _REVISION
+DESCRIPTOR.message_types_by_name['FileVersion'] = _FILEVERSION
 DESCRIPTOR.message_types_by_name['ID'] = _ID
 DESCRIPTOR.message_types_by_name['User'] = _USER
 DESCRIPTOR.message_types_by_name['Project'] = _PROJECT
+DESCRIPTOR.message_types_by_name['Revision'] = _REVISION
 DESCRIPTOR.message_types_by_name['OperationStatus'] = _OPERATIONSTATUS
 DESCRIPTOR.message_types_by_name['SearchRequest'] = _SEARCHREQUEST
 DESCRIPTOR.message_types_by_name['SearchResponse'] = _SEARCHRESPONSE
+DESCRIPTOR.message_types_by_name['SearchRevisionResponse'] = _SEARCHREVISIONRESPONSE
 DESCRIPTOR.enum_types_by_name['VISIBILITY'] = _VISIBILITY
 DESCRIPTOR.enum_types_by_name['STATE'] = _STATE
 DESCRIPTOR.enum_types_by_name['TEMPLATE'] = _TEMPLATE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+FileVersion = _reflection.GeneratedProtocolMessageType('FileVersion', (_message.Message,), {
+  'DESCRIPTOR' : _FILEVERSION,
+  '__module__' : 'service_pb2'
+  # @@protoc_insertion_point(class_scope:project.FileVersion)
+  })
+_sym_db.RegisterMessage(FileVersion)
 
 ID = _reflection.GeneratedProtocolMessageType('ID', (_message.Message,), {
   'DESCRIPTOR' : _ID,
@@ -448,6 +622,13 @@ Project = _reflection.GeneratedProtocolMessageType('Project', (_message.Message,
   })
 _sym_db.RegisterMessage(Project)
 
+Revision = _reflection.GeneratedProtocolMessageType('Revision', (_message.Message,), {
+  'DESCRIPTOR' : _REVISION,
+  '__module__' : 'service_pb2'
+  # @@protoc_insertion_point(class_scope:project.Revision)
+  })
+_sym_db.RegisterMessage(Revision)
+
 OperationStatus = _reflection.GeneratedProtocolMessageType('OperationStatus', (_message.Message,), {
   'DESCRIPTOR' : _OPERATIONSTATUS,
   '__module__' : 'service_pb2'
@@ -469,6 +650,13 @@ SearchResponse = _reflection.GeneratedProtocolMessageType('SearchResponse', (_me
   })
 _sym_db.RegisterMessage(SearchResponse)
 
+SearchRevisionResponse = _reflection.GeneratedProtocolMessageType('SearchRevisionResponse', (_message.Message,), {
+  'DESCRIPTOR' : _SEARCHREVISIONRESPONSE,
+  '__module__' : 'service_pb2'
+  # @@protoc_insertion_point(class_scope:project.SearchRevisionResponse)
+  })
+_sym_db.RegisterMessage(SearchRevisionResponse)
+
 
 DESCRIPTOR._options = None
 
@@ -478,8 +666,8 @@ _PROJECTSERVICES = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=804,
-  serialized_end=1074,
+  serialized_start=1137,
+  serialized_end=1602,
   methods=[
   _descriptor.MethodDescriptor(
     name='Retrieve',
@@ -524,6 +712,33 @@ _PROJECTSERVICES = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_SEARCHREQUEST,
     output_type=_SEARCHRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='RetrieveRevision',
+    full_name='project.ProjectServices.RetrieveRevision',
+    index=5,
+    containing_service=None,
+    input_type=_ID,
+    output_type=_REVISION,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='CreateRevision',
+    full_name='project.ProjectServices.CreateRevision',
+    index=6,
+    containing_service=None,
+    input_type=google_dot_protobuf_dot_struct__pb2._STRUCT,
+    output_type=_REVISION,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='SearchRevision',
+    full_name='project.ProjectServices.SearchRevision',
+    index=7,
+    containing_service=None,
+    input_type=_SEARCHREQUEST,
+    output_type=_SEARCHREVISIONRESPONSE,
     serialized_options=None,
   ),
 ])

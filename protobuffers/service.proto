@@ -21,6 +21,18 @@ service ProjectServices {
     rpc Delete (ID) returns (OperationStatus) {}
     // Search for projects
     rpc Search (SearchRequest) returns (SearchResponse) {}
+    // Retrieve a project's revision from id
+    rpc RetrieveRevision (ID) returns (Revision) {}
+    //  Create a project's Revision
+    rpc CreateRevision (google.protobuf.Struct) returns (Revision) {}
+    // Search for project's revisions
+    rpc SearchRevision (SearchRequest) returns (SearchRevisionResponse) {}
+}
+
+// FileVersion
+message FileVersion {
+    string name = 1;
+    string version = 2;
 }
 
 // ID message
@@ -49,7 +61,8 @@ enum STATE {
 
 // message TEMPLATE
 enum TEMPLATE {
-    SKLEARN = 0;
+    GENERIC = 0;
+    SKLEARN = 1;
 }
 
 // message Project
@@ -65,6 +78,16 @@ message Project {
     repeated google.protobuf.Struct labels = 9;
     string create_at = 10;
     string last_update = 11;
+}
+
+// message Revision
+message Revision {
+    string id = 1;
+    string commit = 2;
+    User author = 3;
+    string project = 4;
+    repeated FileVersion file_tree = 5;
+    string create_at = 6;
 }
 
 // message OperationStatus
@@ -86,4 +109,12 @@ message SearchResponse {
     int32 page_number = 2;
     int32 result_per_page = 3;
     repeated Project projects = 4;
+}
+
+// message  searchRevisionResponse
+message SearchRevisionResponse {
+    int32 total = 1; // search total count results
+    int32 page_number = 2;
+    int32 result_per_page = 3;
+    repeated Revision revisions = 4;
 }
