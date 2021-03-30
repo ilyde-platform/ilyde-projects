@@ -1,0 +1,1 @@
+git submodule add -- https://github.com/ilyde-platform/generic-template.git templates/generic
